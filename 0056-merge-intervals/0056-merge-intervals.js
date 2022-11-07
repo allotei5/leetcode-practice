@@ -10,10 +10,6 @@ var merge = function(intervals) {
         let last = res[res.length-1]
         if (intervals[i][0] <= last[1]) {
             
-            if (intervals[i][1] <= last[0]) {
-                let newLast = []    
-            }
-            
             let newLast = [Math.min(last[0], intervals[i][0]), Math.max(last[1], intervals[i][1])]
             res[res.length-1] = newLast
         } else {
